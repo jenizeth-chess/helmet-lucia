@@ -2,8 +2,6 @@
 
 This is the boilerplate for the Information Security lessons. Instructions for completing these lessons start at https://www.freecodecamp.org/learn/information-security/information-security-with-helmetjs/
 
-Lo hizo Lucia Jenizeth
-holaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Lo hizo Lucia Jenizeth 2
 
-holaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
