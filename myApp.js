@@ -11,6 +11,13 @@ app.use(express.static('public'));
 //2. Desabilitar powered by
 app.use(helmet.hidePoweredBy());
 
+//3. No permitir iframe
+app.use(helmet.frameguard(
+	{
+		action: "deny"
+	}));
+
+
 app.disable('strict-transport-security');
 
 app.use('/_api', api);
