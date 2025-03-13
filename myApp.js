@@ -16,6 +16,9 @@ app.use(helmet.frameguard(
 	{
 		action: "deny"
 	}));
+//4. Mitigar XSS
+app.use(helmet.xssFilter());
+
 
 
 app.disable('strict-transport-security');
