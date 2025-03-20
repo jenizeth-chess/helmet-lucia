@@ -19,6 +19,8 @@ app.use(helmet.frameguard(
 //4. Mitigar XSS
 app.use(helmet.xssFilter());
 
+//5. Evite inferir el tipo MIME
+app.use(helmet.noSniff);
 
 
 app.disable('strict-transport-security');
