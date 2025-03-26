@@ -20,7 +20,7 @@ app.use(helmet.frameguard(
 app.use(helmet.xssFilter());
 
 //5. helmetNoSniff
-app.use(helmet.noSniff);
+app.use(helmet.noSniff());
 
 app.disable('strict-transport-security');
 
