@@ -22,6 +22,9 @@ app.use(helmet.xssFilter());
 //5. helmetNoSniff
 app.use(helmet.noSniff());
 
+//6. Evite que Internet Explorer abra HTML no confiable
+app.use(helmet.ieNoOpen());
+
 app.disable('strict-transport-security');
 
 app.use('/_api', api);
