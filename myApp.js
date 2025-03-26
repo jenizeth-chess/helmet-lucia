@@ -19,6 +19,9 @@ app.use(helmet.frameguard(
 //4. Mitigar XSS
 app.use(helmet.xssFilter());
 
+//5. helmetNoSniff
+app.use(helmet.noSniff);
+
 app.disable('strict-transport-security');
 
 app.use('/_api', api);
