@@ -25,6 +25,13 @@ app.use(helmet.noSniff());
 //6. Evite que Internet Explorer abra HTML no confiable
 app.use(helmet.ieNoOpen());
 
+//7. usar HTTPS
+app.use(helmet.hsts({
+	maxAge: 7776000, 
+	force: true
+}
+));
+
 app.disable('strict-transport-security');
 
 app.use('/_api', api);
