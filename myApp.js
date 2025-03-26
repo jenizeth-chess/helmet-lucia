@@ -19,10 +19,6 @@ app.use(helmet.frameguard(
 //4. Mitigar XSS
 app.use(helmet.xssFilter());
 
-//5. Evite inferir el tipo MIME
-app.use(helmet.noSniff);
-
-
 app.disable('strict-transport-security');
 
 app.use('/_api', api);
@@ -31,8 +27,8 @@ app.get("/", function (request, response) {
   response.sendFile(__dirname + '/views/index.html');
 });
 
-let port = process.env.PORT || 3000;
+let port = process.env.PORT || 10000;
 
-app.listen(port,  '0.0.0.0', () => {
+app.listen(port, () => {
   console.log(`♟️ Lucia info security app started on port ${port}`);
 });
