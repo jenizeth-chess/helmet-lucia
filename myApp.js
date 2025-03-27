@@ -9,6 +9,7 @@ const api = require('./server.js');
 app.use(express.static('public'));
 
 //2. Desabilitar powered by
+/*
 app.use(helmet.hidePoweredBy());
 
 //3. No permitir iframe
@@ -33,7 +34,7 @@ app.use(helmet.hsts({
 ));
 //8. Deshabilitar la precarga de DNS
 app.use(helmet.dnsPrefetchControl());
-
+*/
 //9. deshabilitar alamcenamiento de cache por el cliente
 app.use(helmet.noCache());
 
@@ -46,6 +47,15 @@ app.use(
 	},
 	})
 );
+//11. configurar helmet con middelware 
+app.use(
+	helmet({
+	frameguard: {         // configure
+	  action: 'deny',
+	},
+  })
+);
+
 
 
 app.disable('strict-transport-security');
