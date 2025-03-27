@@ -37,6 +37,14 @@ app.use(helmet.dnsPrefetchControl());
 //9. deshabilitar alamcenamiento de cache por el cliente
 app.use(helmet.noCache());
 
+//10.CSP
+app.use(helmet.contentSecurityPolicy({
+	directives:{
+		"default-scr":["'self'","'helmet-render-lucia.onrender.com'"],
+	},
+	})
+);
+
 
 app.disable('strict-transport-security');
 
