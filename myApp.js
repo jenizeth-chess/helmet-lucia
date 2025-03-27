@@ -38,9 +38,10 @@ app.use(helmet.dnsPrefetchControl());
 app.use(helmet.noCache());
 
 //10.CSP
-app.use(helmet.contentSecurityPolicy({
-	directives:{
-		"default-scr":["'self'","'helmet-render-lucia.onrender.com'"],
+app.use(
+	helmet.contentSecurityPolicy({
+	directives: {
+		"default-src":["'self'","'helmet-render-lucia.onrender.com'"],
 	},
 	})
 );
