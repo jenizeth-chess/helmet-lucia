@@ -34,6 +34,8 @@ app.use(helmet.hsts({
 //8. Deshabilitar la precarga de DNS
 app.use(helmet.dnsPrefetchControl());
 
+//9. deshabilitar alamcenamiento de cache por el cliente
+app.use(helmet.noCache());
 
 
 app.disable('strict-transport-security');
