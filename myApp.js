@@ -31,6 +31,10 @@ app.use(helmet.hsts({
 	force: true
 }
 ));
+//8. Deshabilitar la precarga de DNS
+app.use(helmet.dnsPrefetchControl());
+
+
 
 app.disable('strict-transport-security');
 
