@@ -41,7 +41,7 @@ app.use(helmet.noCache());
 app.use(
 	helmet.contentSecurityPolicy({
 	directives: {
-		"default-src":["'self'","'helmet-render-lucia.onrender.com'"],
+		"default-src":["'self'","'trusted-cdn.com'"],
 	},
 	})
 );
