@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Information Security con HelmetJS
 Realizado por: Lucia Jenizeth Jiménez Cruz - 211150121 - 8SA
 
